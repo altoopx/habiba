@@ -433,13 +433,11 @@
             0% {
                 opacity: 0;
                 transform: scale(0.55) translateY(40px) rotateX(12deg);
-                filter: blur(14px);
             }
 
             60% {
                 opacity: 1;
                 transform: scale(1.03) translateY(-6px) rotateX(0deg);
-                filter: blur(0);
             }
 
             80% {
@@ -449,7 +447,6 @@
             100% {
                 opacity: 1;
                 transform: scale(1) translateY(0);
-                filter: blur(0);
             }
         }
 
@@ -588,7 +585,6 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.8));
-            animation: gradShift 5s ease infinite;
         }
 
         .names-amp {
@@ -611,8 +607,9 @@
         .card-quran {
             font-family: 'Amiri', serif;
             font-size: clamp(11px, 3.1vw, 13px);
-            color: rgba(253, 238, 196, 0.82);
+            color: #ffffff;
             line-height: 2.1;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
             margin-bottom: 12px;
             padding: 9px 14px;
             background: rgba(201, 147, 42, 0.09);
@@ -870,6 +867,7 @@
             pointer-events: none;
             z-index: 5;
             animation: floatUp 7s linear infinite;
+            will-change: transform, opacity;
         }
 
         @keyframes floatUp {
@@ -1008,9 +1006,9 @@
         .orb {
             position: absolute;
             border-radius: 50%;
-            filter: blur(60px);
             animation: orbFloat linear infinite;
             opacity: 0;
+            will-change: transform, opacity;
         }
 
         .orb1 {
@@ -1095,6 +1093,7 @@
             font-size: 12px;
             opacity: 0;
             animation: petalFloat linear forwards;
+            will-change: transform, opacity;
         }
 
         @keyframes petalFloat {
